@@ -1,0 +1,45 @@
+*{
+    box-sizing : border-box; 
+}
+body{
+    padding : 0;
+    margin : 0;
+    height: 100vh;
+    width: 100vw;
+   
+}
+.mainbody{
+    height : 100%;
+    width : 100%;
+   
+}
+.Menubtn{
+    position : absolute;
+    left : 5rem; 
+    top : 2.5rem;
+    height : 3rem;
+    width : 3rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius : 50%; 
+    display : flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    /* rem-> size of the root element */
+}
+.Menubtn>span {
+    font-size: 25px;
+}
+.toolHeader{
+    /* position : absolute; */
+    height: 5rem;
+    width : 25rem;
+    margin : 0 auto;
+    margin-top:20px ;
+
+    /* left : 30rem; */
+    /* top : 40rem; */
+    box-shadow: rgb(0, 0, 0) 0px 3px 8px;
+    border-radius: 10px;
+}
