@@ -1,25 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YNM_WhiteBoard</title>
-    <link rel ="stylesheet" href = "./style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
-      rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
+
 <body>
     <div class="mainbody">
         <div class="Menubtn">
             <span class="material-icons-outlined">
                 menu
-                </span>
+            </span>
         </div>
-        <div class="toolHeader"></div>
+        <div class = "penTool-Box">
+            <div class = "inputPentool">
+                <input type ="range" min ="0" to max = "10" value ="2">
+            </div>
+            <div class = "penToolColorOptions">
+                <div class = "penTooColorBox toolColorYellow"></div>
+                <div class = "penTooColorBox  toolColorRed"></div>
+                <div class = "penTooColorBox toolColorBlue"></div>
+            </div>
+        </div>
+        <div class="toolHeader" style="display:none;">
+            <span class="material-icons-outlined pen">
+                mode_edit_outline
+            </span>
+
+            <span class="material-icons-outlined">
+                bento
+            </span>
+
+            <span class="material-icons-outlined">
+                sticky_note_2
+            </span>
+
+            <span class="material-icons-outlined">
+                image
+            </span>
+
+            <span class="material-icons-outlined">
+                file_download
+            </span>
+
+            <span class="material-icons-outlined">
+                file_upload
+            </span>
+
+            <span class="material-icons-outlined">
+                undo
+            </span>
+
+            <span class="material-icons-outlined">
+                redo
+            </span>
+        </div>
+
+
     </div>
 
 
-    <script src = "./script.js"></script>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
