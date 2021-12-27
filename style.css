@@ -68,8 +68,8 @@ body{
     /* border : 2px solid red; */
     position : absolute;
 
-    left : 41vw;
-    top : 6rem;
+    left : 30rem;
+    top : 7rem;
     border-radius : 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border :2px solid violet;
@@ -112,4 +112,70 @@ body{
 }
 .toolColorBlue{
     background-color: rgb(17, 0, 255);
+}
+
+.eraser-Box{
+    position : absolute;
+    left : 35rem;
+    top : 7rem;
+    height : 3rem; 
+    width : 9rem;
+    border-radius: 10px ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    border : 2px solid violet;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sticky-notes-const{
+    position : absolute;
+    left : 20rem;
+    top : 10rem;
+    height : 17rem; 
+    width : 15rem;
+    /* border : 2px solid red; */
+    overflow: hidden;
+
+}
+
+.sticky-notes-header{
+    height : 15%; 
+    width : 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border : 2px solid violet;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 12px;
+
+}
+.stickyCancelButton{
+    height : 22px; 
+    width : 22px; 
+    margin-left: 12px;
+    color : red;
+}
+
+.stickyMinimizeButton{
+    height : 22px; 
+    width : 22px;
+    color:green;
+   
+   
+}
+.stickContentArea{
+    height : 85%; 
+    width : 100%; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border : 2px solid violet;
+    border-radius:  0px 0px 10px 10px;
+}
+
+.textArea{
+    height : 100%; 
+    width : 100%;
+    resize : none; 
 }

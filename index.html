@@ -17,7 +17,7 @@
                 menu
             </span>
         </div>
-        <div class = "penTool-Box">
+        <div class = "penTool-Box" style="display:none;">
             <div class = "inputPentool">
                 <input type ="range" min ="0" to max = "10" value ="2">
             </div>
@@ -27,12 +27,40 @@
                 <div class = "penTooColorBox toolColorBlue"></div>
             </div>
         </div>
+
+        <div class = "eraser-Box" style="display:none;">
+            <div class = "inputeraser">
+                <input type ="range" min ="0" to max = "10" value ="2">
+            </div>
+            
+        </div>
+
+        <div class = "sticky-notes-const">
+                <div class = "stickyMinimizeButton">
+                    <span class="material-icons-outlined">
+                        remove_circle_outline
+                        </span>
+                
+                <div class = "stickyCancelButton">
+                    
+                    <span class="material-icons-outlined">
+                        cancel
+                        </span>
+                </div>
+
+            </div>
+            <div class = "stickContentArea">
+                <textarea class = "textArea"></textarea>
+
+            </div>
+        </div>
+
         <div class="toolHeader" style="display:none;">
             <span class="material-icons-outlined pen">
                 mode_edit_outline
             </span>
 
-            <span class="material-icons-outlined">
+            <span class="material-icons-outlined eraser">
                 bento
             </span>
 
