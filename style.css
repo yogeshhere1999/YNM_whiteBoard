@@ -1,181 +1,464 @@
 *{
-    box-sizing : border-box; 
+    box-sizing: border-box;
 }
 body{
-    padding : 0;
-    margin : 0;
-    height: 100vh;
-    width: 100vw;
-   
+    padding: 0;
+    margin: 0;
+    height: 100vh; /*vh = viewport's height*/
+    width: 100vw;   /*vh = viewport's height*/
+    /* border: 50px solid blue; */
 }
 .mainbody{
-    height : 100%;
-    width : 100%;
-   
+    height: 100%;
+    width: 100%;
+    /* border: 50px solid rebeccapurple; */
 }
-.Menubtn{
-    position : absolute;
-    left : 5rem; 
-    top : 2.5rem;
-    height : 3rem;
-    width : 3rem;
+.menubutton{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 3rem;
+    top: 2rem;
+    height: 3.5rem;
+    width: 3.5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius : 50%; 
-    display : flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-
-    
-    /* rem-> size of the root element */
-}
-.Menubtn>span {
-    font-size: 25px;
-}
-.toolHeader{
-    /* position : absolute; */
-    height: 5rem;
-    width : 25rem;
-    margin : 0 auto;
-    margin-top:20px ;
-    border: 2px solid violet;
-
-    /* left : 30rem; */
-    /* top : 40rem; */
-    box-shadow: rgb(0, 0, 0) 0px 3px 8px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    cursor: pointer;
-}
-
-.toolHeaderAni{
-    animation-name: toolHeaderAni;
-    animation-duration: 500ms;
-    animation-iteration-count: 1;
-
-}
-
-@keyframes toolHeaderAni{
-    0%{transform : scale(0)}
-    100%{transform : scale(1)}
-}
-
-.penTool-Box{
-    height : 6rem; 
-    width : 9rem;
-    /* border : 2px solid red; */
-    position : absolute;
-
-    left : 30rem;
-    top : 7rem;
-    border-radius : 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border :2px solid violet;
-    
-}
-
-.inputPentool{
-    height: 40%;
-    width : 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    cursor : pointer;
-    border: 1px solid blue
-}
-
-.penToolColorOptions{
-    height : 60%; 
-    width : 100%;
-    display: flex;
-    border : 2px solid violet;
-    justify-content: space-evenly;
-    align-items: center;
-    cursor: pointer;
-    gap : 1rem;
-
-
-}
-.penTooColorBox{
-    height : 30px; 
-    width : 30px;
-    border : 1px solid black;
     border-radius: 50%;
-}
-.toolColorYellow{
-    background-color: rgb(255, 255, 0);
-}
-.toolColorRed{
-    background-color: rgb(255, 0, 0);
-}
-.toolColorBlue{
-    background-color: rgb(17, 0, 255);
-}
-
-.eraser-Box{
-    position : absolute;
-    left : 35rem;
-    top : 7rem;
-    height : 3rem; 
-    width : 9rem;
-    border-radius: 10px ;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
-    border : 2px solid violet;
     justify-content: center;
     align-items: center;
-
+    cursor: pointer;
+    border: 2px solid lightseagreen;
+}
+.menubutton>span{
+    font-size: 25px;
+    color: rgb(56, 56, 56);
 }
 
-.sticky-notes-const{
-    position : absolute;
-    left : 20rem;
-    top : 10rem;
-    height : 17rem; 
-    width : 15rem;
-    /* border : 2px solid red; */
-    overflow: hidden;
-
+.stickynotescontainer{
+    position: absolute;
+    left: 32rem;
+    top: 6rem;
+    height: 16rem;
+    width: 15rem;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  */
+    /* border: 2px solid lightseagreen; */
+    border-radius: 10px;
 }
 
-.sticky-notes-header{
-    height : 15%; 
-    width : 100%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border : 2px solid violet;
+.stickyheader{
+    height: 15%;
+    width: 100%;
+    border: 2px solid lightseagreen;
     border-radius: 10px 10px 0px 0px;
     display: flex;
     justify-content: end;
     align-items: center;
-    padding-right: 12px;
-
-}
-.stickyCancelButton{
-    height : 22px; 
-    width : 22px; 
-    margin-left: 12px;
-    color : red;
+    padding-right: 5px;
 }
 
-.stickyMinimizeButton{
-    height : 22px; 
-    width : 22px;
-    color:green;
-   
-   
+.stickycancelbutton{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
-.stickContentArea{
-    height : 85%; 
-    width : 100%; 
+.stickycancelbutton>span{
+    font-size: 20px;
+    color: rgb(56, 56, 56);
+}
+
+.stickyminimizebutton{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.stickyminimizebutton>span{
+    font-size: 20px;
+    color: rgb(56, 56, 56);
+}
+/* stickycontentarea */
+.stickycontentarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightseagreen;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    border-radius: 0px 0px 10px 10px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.stickycontentarea img{
+    height: 100%;
+    width: 100%;
+}
+
+.textarea{
+    height: 100%;
+    width: 100%;
+    resize: none;
+    border: none;   
+    border-radius: 0px 0px 10px 10px;
+    border: 2px solid lightseagreen;
+}
+
+.erasertoolbox{
+    position: absolute;
+    left: 29rem;
+    top: 6rem;
+    height: 3rem;
+    width: 9rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    border: 2px solid lightseagreen;
+    border-radius: 10px;
+}
+.inputerasertool{
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputerasertool>input{
+    cursor: pointer;
+}
+
+.penciltoolbox{
+    position: absolute;
+    left: 20rem;
+    top: 6rem;
+    height: 6rem;
+    width: 9rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    border: 2px solid lightseagreen;
+    border-radius: 10px;
+}
+.inputpenciltool{
+    height:40%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputpenciltool>input{
+    cursor: pointer;
+}
+.pentoolcoloroptions{
+    height:65%;
+    width:100%;
+    position: absolute;
+    left: 0rem;
+    top: 2.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.pentoolcolorbox{
+    height: 30px;
+    width: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.toolcolorred{
+    background-color: red;
+}
+.toolcoloryellow{
+    background-color: yellow;
+}
+.toolcolorblue{
+    background-color: blue;
+}
+.toolheader{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 20rem;
+    top: 2rem;
+    height: 3.5rem;
+    width: 46rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border : 2px solid violet;
-    border-radius:  0px 0px 10px 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid lightseagreen;
+}
+.toolheader>span{
+    height: 2.5rem;
+    width: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: rgb(56, 56, 56);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+.colorpalette>span{
+    height: 2.5rem;
+    width: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: rgb(56, 56, 56);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
 }
 
-.textArea{
-    height : 100%; 
-    width : 100%;
-    resize : none; 
+.toolanimation{
+    animation: toolanimation;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+}
+@keyframes toolanimation{
+    0%{transform:scale(0)}
+    100%{transform:scale(1)}
+}
+
+.colors{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 33rem;
+    top: 3.2rem;
+    height: 20rem;
+    width: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.color1{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 1.5rem;
+    top: 1.5rem;
+   background-color: black;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color2{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 5rem;
+    top: 1.5rem;
+    background-color: white;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color3{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 8.5rem;
+    top: 1.5rem;
+    background-color: silver;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color4{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 12rem;
+    top: 1.5rem;
+    background-color: gray;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color5{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 15.5rem;
+    top: 1.5rem;
+    background-color: darkgray;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color6{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 1.5rem;
+    top: 5rem;
+    background-color: magenta;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color7{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 5rem;
+    top: 5rem;
+    background-color: red;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color8{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 8.5rem;
+    top: 5rem;
+    background-color: orangered;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color9{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 12rem;
+    top: 5rem;
+    background-color: orange;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color10{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 15.5rem;
+    top: 5rem;
+    background-color: yellow;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color11{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 15.5rem;
+    top: 8.5rem;
+    background-color: yellowgreen;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color12{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 12rem;
+    top: 8.5rem;
+    background-color: lightgreen;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color13{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 8.5rem;
+    top: 8.5rem;
+    background-color: green;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color14{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 5rem;
+    top: 8.5rem;
+    background-color: darkgreen;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color15{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 1.5rem;
+    top: 8.5rem;
+    background-color: blue;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.color16{
+    position: absolute;
+    /* rem = Font size of the root element. */
+    left: 15.5rem;
+    top: 12rem;
+    background-color: blueviolet;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: table-column;
+    justify-content:space-evenly;
+    cursor: pointer;
 }

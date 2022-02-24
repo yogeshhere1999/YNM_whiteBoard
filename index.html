@@ -5,96 +5,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YNM_WhiteBoard</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>WhiteBoard</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
 
 <body>
+
+    <canvas></canvas>
+
     <div class="mainbody">
-        <div class="Menubtn">
+        <div class="menubutton">
             <span class="material-icons-outlined">
                 menu
             </span>
         </div>
-        <div class = "penTool-Box" style="display:none;">
-            <div class = "inputPentool">
-                <input type ="range" min ="0" to max = "10" value ="2">
-            </div>
-            <div class = "penToolColorOptions">
-                <div class = "penTooColorBox toolColorYellow"></div>
-                <div class = "penTooColorBox  toolColorRed"></div>
-                <div class = "penTooColorBox toolColorBlue"></div>
-            </div>
-        </div>
 
-        <div class = "eraser-Box" style="display:none;">
-            <div class = "inputeraser">
-                <input type ="range" min ="0" to max = "10" value ="2">
-            </div>
-            
-        </div>
-
-        <div class = "sticky-notes-const">
-                <div class = "stickyMinimizeButton">
-                    <span class="material-icons-outlined">
-                        remove_circle_outline
-                        </span>
-                
-                <div class = "stickyCancelButton">
-                    
-                    <span class="material-icons-outlined">
-                        cancel
-                        </span>
+        <div class="penciltoolbox" style="display: none;">
+            <div class="inputpenciltool">
+                <input type="range" min="2" to max="10" value="2">
+                <div class="pentoolcoloroptions">
+                    <div class="pentoolcolorbox toolcolorred"></div>
+                    <div class="pentoolcolorbox toolcoloryellow"></div>
+                    <div class="pentoolcolorbox toolcolorblue"></div>
                 </div>
-
-            </div>
-            <div class = "stickContentArea">
-                <textarea class = "textArea"></textarea>
-
             </div>
         </div>
 
-        <div class="toolHeader" style="display:none;">
-            <span class="material-icons-outlined pen">
-                mode_edit_outline
-            </span>
+        <div class="erasertoolbox" style="display: none;">
+            <div class="inputerasertool">
+                <input type="range" min="15" to max="50" value="15">
+            </div>
+        </div>
 
+        <div class="toolheader" style="display: none;">
+            <span class="material-icons-outlined pen">
+                edit
+            </span>
+            <!-- <span class="material-icons-outlined">
+                rectangle
+            </span> -->
             <span class="material-icons-outlined eraser">
                 bento
             </span>
-
-            <span class="material-icons-outlined">
+            <span class="material-icons-outlined stickytool">
                 sticky_note_2
             </span>
-
-            <span class="material-icons-outlined">
+            <span class="material-icons-outlined stickyimagetool">
                 image
             </span>
-
-            <span class="material-icons-outlined">
+            <span class="material-icons-outlined filedownload">
                 file_download
             </span>
-
-            <span class="material-icons-outlined">
-                file_upload
-            </span>
-
-            <span class="material-icons-outlined">
+            <span class="material-icons-outlined undo">
                 undo
             </span>
-
-            <span class="material-icons-outlined">
+            <span class="material-icons-outlined redo">
                 redo
             </span>
+            <!-- <div class="colorpalette">
+                <span class="material-icons-outlined">
+                    palette
+                </span>
+                <div class="colors" style="display:none">
+                    <div class="color1"></div>
+                    <div class="color2"></div>
+                    <div class="color3"></div>
+                    <div class="color4"></div>
+                    <div class="color5"></div>
+                    <div class="color6"></div>
+                    <div class="color7"></div>
+                    <div class="color8"></div>
+                    <div class="color9"></div>
+                    <div class="color10"></div>
+                    <div class="color11"></div>
+                    <div class="color12"></div>
+                    <div class="color13"></div>
+                    <div class="color14"></div>
+                    <div class="color15"></div>
+                    <div class="color16"></div>
+                </div> -->
+
+            </div>
         </div>
-
-
     </div>
-
-
-
-    <script src="./script.js"></script>
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+    <script>
+        let socket = io.connect("http://localhost:5000")
+    </script>
+    <script src="script.js"></script>
+    <script src="canvas.js"></script>
 </body>
 
 </html>
